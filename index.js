@@ -58,6 +58,7 @@ app.put('/api/notes/:id', (request, response, next) => {
             response.json(updatedNote)
         })
         .catch(error => next(error))
+
 })
 
 app.post('/api/notes', (request, response, next) => {
@@ -75,6 +76,7 @@ app.post('/api/notes', (request, response, next) => {
         response.json(savedAndFormattedNote)
     })
         .catch(error => next(error))
+
 })
 
 const unknownEndpoint = (request, response) => {
